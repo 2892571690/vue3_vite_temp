@@ -28,7 +28,7 @@ export const setting = {
     // defaultOpeneds: ['/comp', '/errorPage', '/chart'],
     defaultOpeneds: [],
     // default language
-    lang: 'zh-cn',
+    lang: 'zh',
     // lang storage
     langKey: 'i18nLang',
 }
