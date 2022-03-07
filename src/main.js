@@ -10,6 +10,9 @@ import 'element-plus/dist/index.css'
 // 引入全局router监听
 import '@/config/permission.js'
 
+// 引入国际语言
+import i18n from '@/lang'
+
 
 const app = createApp(App)
 
@@ -24,4 +27,5 @@ iconPark(app);
 app.use(router)
 app.use(store)
 app.use(ElementPlus)
+app.use(i18n)
 app.mount('#app')

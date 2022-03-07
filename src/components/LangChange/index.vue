@@ -29,7 +29,7 @@ defineProps({
 const languages = reactive([
   {
     name: '简体中文',
-    value: 'zh',
+    value: 'zh-cn',
   },
   {
     name: 'English',
@@ -45,7 +45,7 @@ const settingState = settingStore();
 
 const handleSetLanguage = (lang) => {
   settingState.changeLanguage(lang)
-  // location.reload();
+  location.reload();
 };
 </script>
 
