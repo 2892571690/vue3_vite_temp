@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>练习Vite</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/static/loading.css" />
+  <title></title>
+</head>
+
+<body>
+  <div id="app">
+    <div class="app-loading">
+      <div class="app-loading-wrap">
+        <div class="app-loading-dots">
+          <span class="dot dot-spin"><i></i><i></i><i></i><i></i></span>
+        </div>
+        <div class="app-loading-title">泽辰管理后台</div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
