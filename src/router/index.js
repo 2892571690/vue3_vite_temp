@@ -33,8 +33,8 @@ export const asyncRoutes = [
         meta: { title: '用户管理', icon: 'user' },//当children有多个的时候需要添加meta
         children: [
             {
-                path: '/user',
-                name: 'User',
+                path: '/userList',
+                name: 'UserList',
                 component: () => import('@/views/User/index.vue'),
                 meta: {
                     title: '用户',

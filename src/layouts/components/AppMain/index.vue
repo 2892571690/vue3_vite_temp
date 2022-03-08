@@ -1,8 +1,10 @@
 <template>
   <div v-if="settingState.routerView" class="app-main-container">
-    <transition mode="out-in" name="fade-transform">
-      <router-view class="app-main-height" />
-    </transition>
+    <router-view v-slot="{ Component }" class="app-main-height">
+      <transition mode="out-in" name="fade-transform">
+        <component :is="Component" />
+      </transition>
+    </router-view>
     <footer class="footer-copyright">{{ copyrightStr }}</footer>
   </div>
 </template>

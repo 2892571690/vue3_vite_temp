@@ -1,5 +1,7 @@
 <template>
-    <el-button type="primary" @click="handleLogin">登录</el-button>
+    <div>
+        <el-button type="primary" @click="handleLogin">登录</el-button>
+    </div>
 </template>
 <script setup>
 import { userStore } from '@/store/user.js'
