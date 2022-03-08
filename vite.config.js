@@ -26,8 +26,24 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         // 配置全局 scss 变量
-        additionalData: `@import "@/styles/index.scss";`
+        additionalData: `@import "@/styles/index.scss";`,
+        charset: false,// 减少scss在build打包是报错"@charset" must be the first rule in the file"
       },
+    },
+    // 解决scss在build打包是报错"@charset" must be the first rule in the file"
+    postcss: {
+      plugins: [
+        {
+          postcssPlugin: 'internal:charset-removal',
+          AtRule: {
+            charset: (atRule) => {
+              if (atRule.name === 'charset') {
+                atRule.remove()
+              }
+            }
+          }
+        }
+      ]
     }
   },
   resolve: {
